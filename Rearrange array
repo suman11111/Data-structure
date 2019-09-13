@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+void circularRotation(int arr[],int i,int x)
+{
+	int y=arr[x-1];
+	int j;
+	for( j=x-1;j>i;j--)
+	{
+		arr[j]=arr[j-1];
+	}
+	arr[j]=y;
+	
+}
+
+
+int main()
+{
+	int arr[]={1,2,3,4,5,6};
+	int n=6,i,k;
+	
+	for(i=0;i<n;i+2)
+	{
+		circularRotation(arr,i,n);
+	}
+	
+	for(k=0;k<n;k++)
+	{
+		cout<<arr[k]<<" ";
+	}
+	return 0;
+}
