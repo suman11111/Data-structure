@@ -1,0 +1,16 @@
+void reverse(Node**head_ref)
+{
+  Node* nextp=*head_ref;
+  Node* temp=*head_ref;
+  Node* prev=NULL;
+  while(nextp!=NULL)
+  {
+    nextp=temp->next;
+    temp->next=prev;
+    prev=temp;
+    temp=nextp;
+    }
+    *head_ref=prev;
+ }
+    
+    
