@@ -7,7 +7,7 @@ class Node
 	Node *next;
 };
 
-void push(Node** head_ref,int new_data)   //HEADREF IS POINTER NOT TO NODE BUT POINTER TO POINTER WHICH I POINTING TO NODE;
+void push(Node** head_ref,int new_data)   
 {
 	Node* new_node=new Node();
 	new_node->data=new_data;
@@ -68,7 +68,7 @@ void printList(Node *node)
 
 int main()
 {
-	Node* head=NULL; //head is an node pointer   but pointing to null,naya naam diye hai head 
+	Node* head=NULL;  
 	push(&head,6);
 	push(&head,5);
 	push(&head,4);
