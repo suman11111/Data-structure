@@ -7,7 +7,7 @@ class Node
 	Node *next;
 };
 
-void push(Node** head_ref,int new_data)   //HEADREF IS POINTER NOT TO NODE BUT POINTER TO POINTER WHICH I POINTING TO NODE;
+void push(Node** head_ref,int new_data)   
 {
 	Node* new_node=new Node();
 	new_node->data=new_data;
@@ -33,7 +33,7 @@ void skippeddeletenode(Node** head_ref,int m,int n)
 	while(n && temp!=NULL)
 	{
 		prev= temp;
-		if(temp->next)   //jb temp->next null nhi hoga tb andr jayega
+		if(temp->next)   //only if  temp->next will not be  then only enter inside
 		{
 			temp=temp->next;
 			prev->next=temp->next;
